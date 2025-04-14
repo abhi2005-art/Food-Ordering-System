@@ -1,0 +1,147 @@
+body {
+    background-color: #fec701;
+    color: black;
+    margin: 0;
+}
+
+.heading {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(41, 37, 37);
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 10px 20px; /* Add padding for better spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    margin-top: -30px;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 14px 16px; /* Padding for larger click area */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.subhead {
+    margin: 70px 0 20px 60px;
+}
+
+h2 {
+    margin: 0;
+}
+
+hr {
+    width: 240px;
+    margin-left: 60px;
+    border: 1px solid black;
+}
+
+.restaurant-container {
+    display: flex;
+    justify-content: space-around; /* Space out the items evenly */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    margin: 0 60px;
+}
+
+.icecream-item {
+    background-color: rgb(247, 210, 99);
+    border: 4px solid #f4dbac;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 250px; /* Fixed width for uniformity */
+}
+
+/* Zoom-out effect on hover */
+.icecream-item:hover {
+    transform: scale(0.95); /* Scale down to 95% of original size */
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+    height: 25px;
+    background-color: #fff;
+    margin: -40px auto 20px; /* Center the search box */
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 0 15px;
+}
+
+.search-box button {
+    position: absolute;
+    right: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-box button .fa-solid {
+    font-size: 16px;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+}
+
+input {
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    color: black;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+button .fa-solid {
+    width: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}

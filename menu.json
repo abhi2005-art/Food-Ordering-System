@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Stracciatello Pizza",
+        "price": 380.00,
+        "rating": 4.3,
+        "description": "Elegant and creamy, featuring mozzarella, San Marzano sauce, confit cherry tomatoes, basil pesto, and stracciatella.",
+        "dateAdded": "2023-10-01",
+        "image": "stracciatello.png"
+    },
+    {
+        "name": "Massive Vibe Pizza",
+        "price": 430.00,
+        "rating": 4.3,
+        "description": "Features our mozzarella and San Marzano sauce, topped with sun-dried tomatoes, spinach, mushrooms, and olives.",
+        "dateAdded": "2023-10-05",
+        "image": "massive_vibe.png"
+    },
+    {
+        "name": "Quattro Formaggi Pizza",
+        "price": 420.00,
+        "rating": 4.0,
+        "description": "A rich blend of our house mozzarella, Parmesan, provolone, and blue cheese over San Marzano sauce for a decadent cheese experience.",
+        "dateAdded": "2023-10-10",
+        "image": "quattro_formaggi.png"
+    },
+    {
+        "name": "Diavola Veg Pizza",
+        "price": 400.00,
+        "rating": 4.3,
+        "description": "Spicy and flavorful, with mozzarella, San Marzano sauce, spicy sausage, and chili peppers for the boldest taste!",
+        "dateAdded": "2023-10-15",
+        "image": "diavola_veg.png"
+    }
+]

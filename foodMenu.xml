@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="foodMenuTransform.xsl"?>
+
+
+<foodMenu xmlns="http://www.example.com/foodmenu"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.example.com/foodmenu foodMenuSchema.xsd">
+    <menu>
+        <category name="Appetizers">
+            <item>
+                <name>Spring Rolls</name>
+                <description>Fresh vegetable spring rolls served with a tangy sauce.</description>
+                <price>4.99</price>
+            </item>
+            <item>
+                <name>Garlic Bread</name>
+                <description>Warm garlic bread with a crispy crust.</description>
+                <price>3.99</price>
+            </item>
+        </category>
+        <category name="Main Course">
+            <item>
+                <name>Grilled Chicken</name>
+                <description>Succulent grilled chicken served with mashed potatoes.</description>
+                <price>12.99</price>
+            </item>
+            <item>
+                <name>Vegetable Pasta</name>
+                <description>Pasta in a rich tomato sauce with seasonal vegetables.</description>
+                <price>10.99</price>
+            </item>
+        </category>
+        <category name="Desserts">
+            <item>
+                <name>Chocolate Cake</name>
+                <description>Decadent chocolate cake with a molten center.</description>
+                <price>5.99</price>
+            </item>
+            <item>
+                <name>Ice Cream Sundae</name>
+                <description>Vanilla ice cream topped with chocolate syrup and nuts.</description>
+                <price>4.99</price>
+            </item>
+        </category>
+        <category name="Pizza">
+            <item>
+                <name>Margherita</name>
+                <description>Classic margherita pizza with fresh mozzarella and basil.</description>
+                <price>8.99</price>
+            </item>
+            <item>
+                <name>Pepperoni</name>
+                <description>Pizza topped with pepperoni slices and melted cheese.</description>
+                <price>9.99</price>
+            </item>
+            <item>
+                <name>Veggie Supreme</name>
+                <description>Loaded with fresh vegetables, olives, and mozzarella.</description>
+                <price>10.99</price>
+            </item>
+        </category>
+    </menu>
+</foodMenu>

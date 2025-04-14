@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pizzaApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Cart</title>
+    
+    <!-- AngularJS and Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js"></script>
+    
+    <!-- Reference to app.js -->
+    <script src="./appcart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fec701;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .cart-container {
+            width: 100%;
+            max-width: 850px;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            padding: 40px;
+            animation: slideIn 1s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cart-item span {
+            font-size: 18px;
+            flex: 1;
+            padding-left: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .cart-item span:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .cart-item button {
+            background-color: #dc3545;
+            color: white;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cart-item button:hover {
+            background-color: #b02a37;
+            transform: scale(1.05);
+        }
+
+        .cart-item:hover {
+            background-color: #f7f7f7;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .empty-cart {
+            text-align: center;
+            font-size: 20px;
+            color: #777;
+            margin-top: 35px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 25px;
+            color: #333;
+            border-top: 2px solid #f0f0f0;
+            padding-top: 20px;
+        }
+
+        .place-order {
+            background-color: #000;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 20px;
+            margin-top: 35px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .place-order:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body ng-controller="CartController">
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+
+        <!-- Cart Items -->
+        <div ng-if="cart.length > 0">
+            <div class="cart-item" ng-repeat="item in cart track by $index">
+                <span>{{ item.name }}</span>
+                <span>₹{{ item.price }}</span>
+                <button ng-click="removeFromCart($index)">Remove</button>
+            </div>
+            <div class="total">Total: ₹{{ getTotal() }}</div>
+        </div>
+
+        <!-- Empty Cart Message -->
+        <div ng-if="cart.length === 0" class="empty-cart">
+            Your cart is empty. Add some pizzas to your cart!
+        </div>
+
+        <!-- Place Order Button -->
+        <button class="place-order" ng-click="placeOrder()" ng-disabled="cart.length === 0">Place Order</button>
+    </div>
+</body>
+
+</html>
+
+
+<!-- C:\Users\Abhishek N>cd C:\xampp\htdocs\demo\Domain\food-ordering-system
+
+C:\xampp\htdocs\demo\Domain\food-ordering-system>node index.js
+🚀 Server running at http://localhost:3000 -->
+
+

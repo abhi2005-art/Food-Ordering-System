@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizza Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="brikoven.css">
+    <script src="https://kit.fontawesome.com/2cea0294d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1 style="background-color: black; color: white; padding: 20px;">Pizza Menu</h1>
+            <div class="topnav">
+                <a href="explore.php">Home</a>
+                <a href="Freshfare.php">Items</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <div class="search-box">
+                <div class="row">
+                    <input type="text" id="myInput" placeholder="Search for pizza..." autocomplete="off">
+                    <button onclick="myFunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin-top: 100px;">
+        <section>
+            <div id="item-list">
+                <div class="item" data-name="Box Non Veg Pizza" data-price="380">
+                    <img src="MyBoxNonVeg.avif" height="190" width="215" class="item-image">
+                    <div class="item-description">
+                        <b>Box Non Veg Pizza<br>Rs. 380</b>
+                        4.3 (22)
+                        <p class="more-info">
+                            Elegant and creamy, featuring our mozzarella, San Marzano sauce, confit cherry tomatoes,
+                            basil pesto, and stracciatella for a rich flavor harmony.
+                            <button type="button" onclick="info2()">More...</button>
+                        </p>
+                        <div class="cart-button-container">
+                            <button class="cart-button" onclick="addToCart('Box Non Veg Pizza', 380)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-name="My Veg Box Veg" data-price="430">
+                    <img src="MyBoxVeg.avif" height="190" width="215" class="item-image">
+                    <div class="item-description">
+                        <b>My Box Veg<br>Rs. 430</b>
+                        4.3 (164)
+                        <p class="more-info">
+                            Features our mozzarella and San Marzano sauce, topped with sun-dried tomatoes, spinach,
+                            mushrooms, and olives, for a bold flavor profile.
+                        </p>
+                        <div class="cart-button-container">
+                            <button class="cart-button" onclick="addToCart('My Box Veg', 430)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-name="Margherita" data-price="169">
+                    <img src="Margherita.avif" height="190" width="215" class="item-image">
+                    <div class="item-description">
+                        <b>Margherita<br>Rs. 169</b>
+                        4.1 (284)
+                        <p class="more-info">
+                            Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there! 
+                            <button type="button" onclick="info()">More...</button>
+                        </p>
+                        <div class="cart-button-container">
+                            <button class="cart-button" onclick="addToCart('Margherita', 169)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-name="Tandoori Paneer Pizza" data-price="319">
+                    <img src="TandooriPaneer.avif" height="190" width="215" class="item-image">
+                    <div class="item-description">
+                        <b>Tandoori Paneer<br>Rs. 319</b>
+                        4.2 (119)
+                        <p class="more-info">
+                            Serves 1 | It's our signature. Spiced paneer, crunchy onions & green capsicum, spicy red paprika with delicious tandoori sauce and 100% mozzarella cheese!
+                            <button type="button" onclick="info3()">More...</button>
+                        </p>
+                        <div class="cart-button-container">
+                            <button class="cart-button" onclick="addToCart('Tandoori Paneer', 319)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function myFunction() {
+            var input = document.getElementById('myInput').value.toLowerCase();
+            var items = document.querySelectorAll('.item');
+
+            items.forEach(function(item) {
+                var itemName = item.getAttribute('data-name').toLowerCase();
+                if (itemName.includes(input)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: name, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' has been added to your cart!');
+        }
+
+        function info() {
+            document.getElementById("moreInfo").innerHTML = "Pizza topped with our herb-infused <br>signature pan sauce and 100% mozzarella <br>cheese. A classic treat for all cheese<br> lovers out there! (PAN Per/Med-292 <br>Kcal/100g | TnC-293 Kcal/100g | Stuffed <br>Crust Add : Per: 227 Kcal/100g | Med: <br>216 Kcal/100g) Contains Cereals containing <br>Gluten (Wheat), Soya and Milk & Milk Products.";
+        }
+
+        function info2() {
+            document.getElementById("moreInfo2").innerHTML = "Elegant and creamy, featuring our mozzarella, <br>San Marzano sauce, confit cherry <br>tomatoes, basil pesto, and stracciatella<br>for a rich flavor harmony.<br>Origins: Inspired by \"Stracciatella,\" <br>meaning \"torn apart\" in Italian, <br>and our favorite ninja turtle, Donatello.";
+        }
+
+        function info3() {
+            document.getElementById("moreInfo3").innerHTML = "Serves 1 | It's our signature. Spiced paneer, <br>crunchy onions & green capsicum, spicy<br> red paprika with delicious tandoori <br>sauce and 100% mozzarella cheese!<br> (PAN Per/Med-335 Kcal/100g | TnC-326 <br>Kcal/100g | Stuffed Crust Add : <br>Per: 227 Kcal/100g | Med: 216 Kcal/100g)<br> Contains Cereals containing Gluten (Wheat),<br> Soya and Milk & Milk Products.";
+        }
+    </script>
+</body>
+</html>

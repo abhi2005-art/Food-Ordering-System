@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Facts</title>
+    <style>
+        /* General Body and Font */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1e1e1e;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin: 0;
+            padding: 10px 0;
+            letter-spacing: 1px;
+        }
+
+        .topnav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .topnav a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .search-box {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-box button .fa-solid {
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Table Styling */
+        table {
+            background-color: #fff;
+            border: 2px solid #1e1e1e;
+            border-collapse: collapse;
+            margin: 30px auto;
+            width: 80%;
+        }
+
+        table th, table td {
+            border: 1px solid #1e1e1e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Pizza Nutritional Facts</h1>
+        <div class="topnav">
+            <a href="explore.html">Home</a>
+            <a href="items.php">Items</a>
+            <a href="cart.php">Cart</a>
+        </div>
+        <div class="search-box">
+            <input type="text" id="input-box" placeholder="Search your food..." autocomplete="off">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </header>
+
+    <!-- Nutrition Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nutrition</th>
+                <th>Per Serving</th>
+                <th>Per Container</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Calories</td>
+                <td>260</td>
+                <td>770</td>
+            </tr>
+            <tr>
+                <td>Total Fat</td>
+                <td>16g (21%)</td>
+                <td>46g (62%)</td>
+            </tr>
+            <tr>
+                <td>Saturated Fat</td>
+                <td>6g (30%)</td>
+                <td>17g (85%)</td>
+            </tr>
+            <tr>
+                <td>Trans Fat</td>
+                <td colspan="2">0g </td>
+            </tr>
+            <tr>
+                <td>Cholesterol</td>
+                <td>40mg (13%)</td>
+                <td>115mg (38%)</td>
+            </tr>
+            <tr>
+                <td>Sodium</td>
+                <td>700mg (30%)</td>
+                <td>2090mg (91%)</td>
+            </tr>
+            <tr>
+                <td>Protein</td>
+                <td>20g (40%)</td>
+                <td>60g (120%)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Back Button -->
+    <center>
+        <form action="Freshfare.html">
+            <button>Go Back</button>
+        </form>
+    </center>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <a href="contact.html">Contact Us</a>
+            <p>Location: 5th Cross, S.G. Palya, Bangalore, Karnataka, India.</p>
+            <p>&copy; 2024 Fresh Fare Website</p>
+        </div>
+    </footer>
+</body>
+
+</html>
