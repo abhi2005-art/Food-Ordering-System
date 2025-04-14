@@ -35,7 +35,7 @@ A full-stack web application for online food ordering, built using modern web te
 
 **Database:**
 - MySQL
-- SQL (for hotel management system, used for booking & order storage)
+- SQL (for food ordering system, used for booking & order storage)
 
 ---
 
